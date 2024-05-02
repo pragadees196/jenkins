@@ -1,15 +1,22 @@
 pipeline{
-    agent any{
+    agent any
         stages{
             stage("Checkout"){
-                echo "this step will checkout the code"
+                step {
+                    echo "this step will checkout the code"
+                }
+               
             }
             stage("Build"){
-                echo "This step is to build the app"
+                step{
+                    echo "This step is to build the app"
+                }
             }
             stage("deploy"){
-                echo "This step is to deloy the app"
+                step{
+                    echo "This step is to deloy the app"
+                }
             }
         }
-    }
+    
 }
