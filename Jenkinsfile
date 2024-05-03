@@ -7,12 +7,12 @@ pipeline{
     stages{
         stage("First"){
             steps{
-                echo "My name is ${name}"
+                echo "My name is ${Name}"
             }
         }
         stage("Second"){
             steps{
-                echo "age: ${age}"
+                echo "age: ${Age}"
             }
         }
         stage("Third"){
