@@ -17,7 +17,7 @@ pipeline{
                }
             }
             steps{
-                echo "age: ${age}"
+                echo "Age: ${params.Age}"
             }
         }
         stage("Third"){
