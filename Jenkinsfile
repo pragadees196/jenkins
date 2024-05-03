@@ -13,7 +13,7 @@ pipeline{
         stage("Second"){
             when{
                expression{
-                 params.Age > 22
+                 params.Age.toInt() > 22
                }
             }
             steps{
