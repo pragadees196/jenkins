@@ -1,8 +1,8 @@
 pipeline{
     agent any
-    environment{
-        name = "Pragadees"
-        age = 22
+    parameters{
+        string(name: "Name",default: "")
+        choice(name: "Age",choices:[20,21,22,23])
     }
     stages{
         stage("First"){
