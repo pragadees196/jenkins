@@ -7,12 +7,17 @@ pipeline{
     stages{
         stage("First"){
             steps{
-                echo "My name is ${Name}"
+                echo "My name is ${name}"
             }
         }
         stage("Second"){
+            when{
+               expression{
+                 params.Age > 22
+               }
+            }
             steps{
-                echo "age: ${Age}"
+                echo "age: ${age}"
             }
         }
         stage("Third"){
