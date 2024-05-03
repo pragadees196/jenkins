@@ -13,7 +13,8 @@ pipeline{
         stage("Second"){
             when{
                expression{
-                 params.Age.toInt() > 22
+                 def age = params.Age ?: 0 // Default to 0 if Age parameter is null or empty
+                 age.toInteger() > 22
                }
             }
             steps{
