@@ -1,14 +1,14 @@
 pipeline{
     agent any
     stages{
-        stage("first"){
+        stage("First"){
             steps{
-                sh 'python3 test.py'
+                echo "First"
             }
         }
-        stage("second"){
+        stage("Second"){
             steps{
-                echo 'second'
+                echo "Second"
             }
         }
         stage("Third"){
