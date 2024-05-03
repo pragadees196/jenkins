@@ -1,7 +1,7 @@
 pipeline{
     agent any
     parameters{
-        string(name: "Name",default: "")
+        string(name: "Name")
         choice(name: "Age",choices:[20,21,22,23])
     }
     stages{
