@@ -7,17 +7,17 @@ pipeline{
     stages{
         stage("First"){
             steps{
-                echo "My name is {name}"
+                echo "My name is ${name}"
             }
         }
         stage("Second"){
             steps{
-                echo "age: {age}"
+                echo "age: ${age}"
             }
         }
         stage("Third"){
             steps{
-                echo "python3 test.py"
+                sh "python3 test.py"
             }
         }
     }
