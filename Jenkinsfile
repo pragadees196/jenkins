@@ -8,12 +8,12 @@ pipeline{
         stage("First"){
             steps{
                 echo "My name is ${name}"
-                echo "Age: ${Age}"
+                
             }
         }
-        stage("Docker ps"){
+        stage("Second"){
             steps{
-                sh "/usr/local/bin/docker ps"
+               echo "Age: ${Age}"
             }
         }
         stage("Third"){
