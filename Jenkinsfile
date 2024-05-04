@@ -13,7 +13,7 @@ pipeline{
         }
         stage("Docker ps"){
             steps{
-                sh "docker ps"
+                sh "/usr/local/bin/docker ps"
             }
         }
         stage("Third"){
