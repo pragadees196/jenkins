@@ -8,11 +8,12 @@ pipeline{
         stage("First"){
             steps{
                 echo "My name is ${name}"
+                echo "Age: ${Age}"
             }
         }
-        stage("Second"){
+        stage("Docker ps"){
             steps{
-                echo "Age: ${Age}"
+                sh "docker ps"
             }
         }
         stage("Third"){
